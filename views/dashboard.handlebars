@@ -1,0 +1,22 @@
+{{#if posts.length }}
+{{#each posts as |post|}}
+<a href="/dashboard/edit/{{id}}">
+    <div class="card">
+        <div>
+            <div class="card-header">
+                <p>{{post.title}}</p>
+                <p>Post on {{format_date date_created}}</p>
+            </div>
+            <div class="card-body">
+                {{post.content}}
+            </div>
+        </div>
+    </div>
+</a>
+{{/each}}
+{{/if}}
+<div>
+    <div>
+        <a href="/dashboard/newpost" type="button" class="button">+ New Content</a>
+    </div>
+</div>
