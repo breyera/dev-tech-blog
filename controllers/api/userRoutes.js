@@ -17,18 +17,22 @@ router.post('/', async (req,res) => {
         });
     } catch (err) {
         res.status(400).json(err);
+        console.error(err);
     }
 });
 
 router.post('/login', async (req,res) => {
     try {
         const userData = await User.findOne({ where: { name: req.body.name } });
+        console.log(userData);
+        console.log(req.body.name);
         if (!userData) {
             res.status(400).json({ message: 'Incorrect name or password, please try again' });
             return;
         }
 
         const validPassword = await userData.checkPassword(req.body.password);
+        console.log(validPassword);
         if (!validPassword) {
             res.status(400).json({ message: 'Incorrect name or password, please try again' });
             return;
@@ -41,8 +45,10 @@ router.post('/login', async (req,res) => {
             req.session.logged_name = userData.name
             res.json({ user: userData, message: 'You are now logged in' });
         });
+
     } catch (err) {
         res.status(400).json(err);
+        console.error(err);
     }
 });
 
