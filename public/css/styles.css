@@ -78,6 +78,11 @@ body {
   color: #fff;
   margin: 0;
 }
+
+.button {
+  background-color: blueviolet;
+  color: white;
+}
 /* style footer  */
 footer {
   position: relative;
