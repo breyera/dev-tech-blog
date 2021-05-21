@@ -15,10 +15,10 @@
         </div>
     </div>
     <div class="card dashboard-card">
-        <div class="card-header">
+        <div class="c-header">
             <h4>Add Comment</h4>
         </div>
-        <form method="POST" action="/api/comments" class="card-body">
+        <form method="POST" action="/api/comments" class="card-body form-s">
             <div class="card-body content-card">
                 <div class="form-group">
                     <label for="post_id">Post ID:</label>
@@ -39,11 +39,11 @@
 </div>
 {{#each comments as |comment|}}
 <div class="card dashboard-card">
-    <div class="card-header">
+    <div class="c-header">
         <h4>Comment</h4>
     </div>
     <div class="card-body content-card">
-        <h4>{{ commentary }}</h4>
+        <p>{{ commentary }}</p>
         <footer class="blockquote-footer">Commented by: {{ user_name }} on {{ format_date date_created }}</footer>
     </div>
 </div>
