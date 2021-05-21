@@ -108,6 +108,26 @@ main a:hover {
   color: #000;
   opacity: 0.7;
 }
+
+.container {
+  padding: 1rem;
+  background-color: #ffffff73;
+}
+
+.page-title {
+  border-bottom: solid #0000005c;
+  padding-bottom: 0.5rem;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #2e5e9287;
+  border-color: #2e5e9287;
+}
+.white {
+  background-color: #2e5e9238;
+  border-color: #2e5e9238;
+}
 /* style footer  */
 footer {
   position: relative;
